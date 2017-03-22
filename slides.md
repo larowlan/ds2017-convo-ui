@@ -306,6 +306,19 @@ Note:
 
 --
 
+## <del>Stable = security team coverage</del>
+
+March 2013: Not all stable modules are created equal
+
+<pre>https://github.com/larowlan/composer_drupal_security</pre>
+
+Note:
+
+- working to get coverage flag in composer.json extra
+- https://github.com/larowlan/composer_drupal_security
+
+--
+
 ## Vetted module lists?
 
 - Instead minimum-stability flags?
