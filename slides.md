@@ -482,7 +482,7 @@ Note:
 
 <!-- .slide: data-background="./images/bp-10.jpg" -->
 
-# Questions?
+## Questions?
 
 - https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies
 - ping me on irc in #drupal-au to discuss more
