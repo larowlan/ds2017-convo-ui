@@ -54,6 +54,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-1.jpg" -->
+
 ## composer.json
 
 Note:
@@ -64,6 +66,8 @@ Note:
 - Directories to place stuff in
 
 --
+
+<!-- .slide: data-background="./images/bp-2.jpg" -->
 
 ## composer.lock
 
@@ -76,6 +80,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-3.jpg" -->
+
 ## Adding a dependency
 
 - <code>composer require "symfony/yaml:~2.8"</code>
@@ -83,6 +89,8 @@ Note:
 --
 
 ## Version constraints
+
+<!-- .slide: data-background="./images/bp-4.jpg" -->
 
 - ~1.2
 - ^1.2.0
@@ -92,11 +100,15 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-5.jpg" -->
+
 ## Installing
 
 - <code>composer install --prefer-dist</code>
 
 --
+
+<!-- .slide: data-background="./images/bp-6.jpg" -->
 
 ## Updating
 
@@ -106,11 +118,15 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-7.jpg" -->
+
 ## Outdated
 
 - <code>composer outdated</code>
 
 --
+
+<!-- .slide: data-background="./images/bp-8.jpg" -->
 
 ## Drupal 8
 
@@ -118,6 +134,8 @@ Note:
 - <code>composer create-project drupal-composer/drupal-project:8.x-dev myproject --stability dev --no-interaction</code>
 
 --
+
+<!-- .slide: data-background="./images/bp-9.jpg" -->
 
 ## drupal.org Packagist
 
@@ -130,17 +148,23 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-10.jpg" -->
+
 ## Plugins
 
 - Many of these included in Drupal project template
 
 --
 
+<!-- .slide: data-background="./images/bp-11.jpg" -->
+
 ## Composer installers
 
 - <code>composer require "composer/installers:~1.0"</code>
 
 --
+
+<!-- .slide: data-background="./images/bp-12.jpg" -->
 
 ## Composer installers
 
@@ -163,11 +187,15 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-13.jpg" -->
+
 ## Composer patches
 
 - <code>composer require "cweagans/composer-patches:~1.5"</code>
 
 --
+
+<!-- .slide: data-background="./images/bp-1.jpg" -->
 
 ## Composer patches
 
@@ -183,9 +211,13 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-2.jpg" -->
+
 ## So what does this have to do with security?
 
 --
+
+<!-- .slide: data-background="./images/bp-3.jpg" -->
 
 ## Let's talk about audits
 
@@ -198,6 +230,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-4.jpg" -->
+
 ## Steps in the audit process
 
 - Determine if the site is running insecure versions
@@ -207,6 +241,8 @@ Note:
 - drush upc --security-only
 
 --
+
+<!-- .slide: data-background="./images/bp-5.jpg" -->
 
 ## Steps in the audit process
 
@@ -220,6 +256,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-6.jpg" -->
+
 ## The audit surface is huge
 
 - although hacked.module can help
@@ -231,6 +269,8 @@ Note:
 - plus contrib code probably of the order of 20 - 30M of code
 
 --
+
+<!-- .slide: data-background="./images/bp-7.jpg" -->
 
 ## Everytime you hack core
 
@@ -246,6 +286,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-8.jpg" -->
+
 ## No patches?
 
 - good luck with that critical security update
@@ -259,6 +301,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-9.jpg" -->
+
 ## So what is left?
 
 Note:
@@ -269,6 +313,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-10.jpg" -->
+
 ## Custom code
 
 - Themes
@@ -276,11 +322,15 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-11.jpg" -->
+
 ## That's it
 
 - Congratulations, you know have a much smaller audit surface
 
 --
+
+<!-- .slide: data-background="./images/bp-12.jpg" -->
 
 ## New audit process
 
@@ -291,6 +341,8 @@ Note:
 - drush upc --security-only --dry-run
 
 --
+
+<!-- .slide: data-background="./images/bp-13.jpg" -->
 
 ## Any alphas or dev versions?
 
@@ -306,11 +358,14 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-1.jpg" -->
+
 ## <del>Stable = security team coverage</del>
 
 March 2013: Not all stable modules are created equal
 
-<pre>https://github.com/larowlan/composer_drupal_security</pre>
+https://github.com/larowlan/composer_drupal_security
+https://www.drupal.org/node/2863103
 
 Note:
 
@@ -318,6 +373,8 @@ Note:
 - https://github.com/larowlan/composer_drupal_security
 
 --
+
+<!-- .slide: data-background="./images/bp-2.jpg" -->
 
 ## Vetted module lists?
 
@@ -331,6 +388,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-3.jpg" -->
+
 ## Out of date third party code?
 
 - <pre><code>composer outdated</code></pre>
@@ -339,11 +398,15 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-4.jpg" -->
+
 ## Third-party security<br>vulnerabilities
 
 - Sensiolabs security database & checker
 
 --
+
+<!-- .slide: data-background="./images/bp-5.jpg" -->
 
 ## Web version
 
@@ -357,6 +420,8 @@ Note:
 - its your guarantee
 
 --
+
+<!-- .slide: data-background="./images/bp-6.jpg" -->
 
 ## Tooling
 
@@ -373,6 +438,8 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-7.jpg" -->
+
 ## How does it work?
 
 - https://github.com/FriendsOfPHP/security-advisories
@@ -382,6 +449,8 @@ Note:
 - open source database of PHP project CVEs (common vulnerabilities and exposures)
 
 --
+
+<!-- .slide: data-background="./images/bp-8.jpg" -->
 
 ## Does it include Drupal?
 
@@ -394,6 +463,8 @@ Note:
 - We need the security checker to support packagist repos outside packagist (drupal.org)
 
 --
+
+<!-- .slide: data-background="./images/bp-9.jpg" -->
 
 ## Something more formal
 
@@ -409,12 +480,16 @@ Note:
 
 --
 
+<!-- .slide: data-background="./images/bp-10.jpg" -->
+
 # Questions?
 
 - https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies
 - ping me on irc in #drupal-au to discuss more
 
 --
+
+<!-- .slide: data-background="./images/bp-11.jpg" -->
 
 ## Image credits
 
@@ -424,5 +499,18 @@ Note:
 <li>https://www.flickr.com/photos/statelibraryqueensland/16618698644</li>
 <li>https://www.flickr.com/photos/statelibraryqueensland/4312619111</li>
 <li>https://www.flickr.com/photos/statelibraryqueensland/4461115473</li>
-<li>https://www.flickr.com/photos/statelibraryqueensland/4189609872</li>
+<li>https://www.flickr.com/photos/statelibraryqueensland/4189609872</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25478967541</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25276069800</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25478962321</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25276070990</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25204135719</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25453113632</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/24941183594</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25514085021</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25606753555</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/24980052313</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/25571686705</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/24941185404</li><li>
+https://www.flickr.com/photos/statelibraryqueensland/24944998423</li>
 </ul>
