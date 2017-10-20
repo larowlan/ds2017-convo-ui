@@ -31,29 +31,72 @@ What could possibly go wrong?
 
 ## Terminology
 
+Note:
+- so let's go over some of the terminology we're going to cover
+
 --
 
 ## Intents
+
+Note:
+- mapping what the user says into an action
+- 'Order some pizza?'
+- 'What is the wait time?'
 
 --
 
 ## Entities
 
+Note:
+- familiar w/ from Drupal
+- basically the same
+- collection of objects
+- synonyms
+
 --
 
 ## Context
+
+Note:
+- conversation is threaded
+- humans keep track
+- 'play something by Kurt Ville'
+- 'give me another one'
 
 --
 
 ## Fulfillment
 
+Note:
+- Dynamic responses
+- Where Drupal fits in
+
 ---
 
 ## Design considerations
 
+Note:
+- So conversation is hard
+- You need to plan
+- Nothing worse than poor UX/ rabbit holes
+
 --
 
+## You need to think about
+
+- Scope
+- Personality
+- Flow
+
+--
+
+<!-- .slide: data-background="./images/twine.png" -->
 ## Mapping out the flow
+
+- https://twinery.org/2/
+
+Note:
+- Use a flow charting tool 
 
 --
 
