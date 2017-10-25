@@ -60,7 +60,7 @@ Note:
 Note:
 - conversation is threaded
 - humans keep track
-- 'play something by Kurt Ville'
+- 'play something by Kurt Vile'
 - 'give me another one'
 
 --
@@ -90,6 +90,15 @@ Note:
 
 --
 
+## Scope
+
+Note:
+- Make it clear what you can and can't do
+- Avoid unrelated questions and dead-ends
+- Good intro text
+
+--
+
 <!-- .slide: data-background="./images/twine.png" -->
 ## Mapping out the flow
 
@@ -102,34 +111,72 @@ Note:
 
 ## Start with the happy path
 
+Note:
+- User gets it straight away
+- Typical flow
+
 --
 
 ## Don't forget the unhappy path
 
+Note:
+- Add a 'help' if you get stuck
+- Redirect them to other forms
+- Start over
+
 --
 
 ## Character
+
+Note:
+- Keep it interesting
+- Make it fun
+- Make it unique
 
 ---
 
 ## Dialogflow
 (formerly api.ai)
 
+Note:
+- tool of choice
+
 --
 
 ## Your first intent
+
+Note:
+- User says
+- Machine learning
+- Enter 5-10 to seed it
+- The more the better
 
 --
 
 ## Creating some entities
 
+Note:
+- Some are fixed
+- Some are dynamic (more on that later)
+- Synonyms are important
+
 --
 
 ## Tracking context
 
+Note:
+- Play a song by 'Beulah'
+- Play another song
+- Expiring context
+- Requiring context
+
 --
 
 ## Fulfillment with Drupal
+
+Note:
+- Configure url
+- configure password
 
 ---
 
@@ -147,12 +194,15 @@ Note:
 
 <code>drupal.org/project/api_ai_webhook</code>
 
----
+--
 
 ## Intent plugins
 (show me some code)
 
----
+Note:
+- https://github.com/previousnext/pnx-d8/blob/master/app/modules/custom/pnx_bot/src/Plugin/Chatbot/Intent/Blogs.php
+
+--
 
 ## Pushing entities
 (show me some site building)
@@ -161,28 +211,33 @@ Note:
 
 ## Recap
 
+* Demo
+* Terminology
+* Dialogflow
+* Drupal
+
+Note:
+- Go out and make something cool
+
 ---
+
+<!-- .slide: data-background="./images/turtle.jpg" -->
+
+## Looping back
+
+@larowlan
+
+Let me know if you build something interesting
+
+Note:
+- Senior Drupal Developer with PNX
+- QLD based
+
+--
 
 ## Image credits
 
 - https://flic.kr/p/73DhiT
 - https://flic.kr/p/smA95B
-
---
-
-<!-- .slide: data-background="./images/turtle.jpg" -->
-
-## About me
-
-@larowlan
-
-Note:
-- Senior Drupal Developer with PNX
-- QLD based
-- Into 10th year of this Drupal thing
-- Provisional framework Maintainer (core committer)
-- Security team
-- Maintainer of 4 modules in core
-- Maintainer of many more in contrib
 
 --
