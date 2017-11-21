@@ -3,12 +3,15 @@
 
 Note:
 - The api formerly known as api.ai
+- make sure I have these open
+>- dialogflow
+>- drupal south site
 
 --
 
 <!-- .slide: data-background="./images/willis.jpg" -->
 
-## What we'll cover
+## Overview
 
 Note:
 - Some basics of conversational UI
@@ -26,6 +29,25 @@ Note:
 ## Live Demo!
 
 What could possibly go wrong?
+
+Note:
+- What docker sessions are there on Friday morning
+- Who is the speaker/what time is it
+- Banana
+- Tell me about the vault room
+- Next/search again/frontend development/filter by day/thursday afternoon/next/prev
+- Banana x 3
+
+--
+
+## So?
+
+![](./images/Selection_030.png)
+
+Note:
+- gimmicky?
+- drupal as canonical source
+- omni-channel
 
 ---
 
@@ -136,7 +158,8 @@ Note:
 ---
 
 ## Dialogflow
-(formerly api.ai)
+(formerly api.ai)<br>
+![](./images/Selection_040.png)
 
 Note:
 - tool of choice
@@ -144,6 +167,8 @@ Note:
 --
 
 ## Your first intent
+
+![](./images/Selection_029.png)
 
 Note:
 - User says
@@ -155,6 +180,9 @@ Note:
 
 ## Creating some entities
 
+![](./images/Selection_036.png)
+
+
 Note:
 - Some are fixed
 - Some are dynamic (more on that later)
@@ -162,7 +190,26 @@ Note:
 
 --
 
+## Slots
+
+![](./images/Selection_031.png)
+
+Note:
+- Can be required
+- Will prompt
+
+--
+
+## Slots
+
+![](./images/Selection_032.png)
+
+--
+
 ## Tracking context
+
+![](./images/Selection_034.png)
+
 
 Note:
 - Play a song by 'Beulah'
@@ -174,9 +221,36 @@ Note:
 
 ## Fulfillment with Drupal
 
+![](./images/Selection_039.png)
+
 Note:
 - Configure url
 - configure password
+
+--
+
+## Integrations 
+
+![](./images/Selection_028.png)
+
+Note:
+- Actions on google
+- Raw JavaScript
+
+--
+
+## Training
+
+![](./images/Selection_038.png)
+
+Note:
+- When things go wrong
+
+--
+
+## Testing
+
+![](./images/Selection_033.png)
 
 ---
 
@@ -204,8 +278,92 @@ Note:
 
 --
 
+<pre><code class="php">namespace Drupal\your_module\Plugin\Chatbot\Intent;
+
+use Drupal\chatbot_api\Plugin\IntentPluginBase;
+/**
+ * @Intent(
+ *   id = "speaker_info_cold",
+ *   admin_label = @Translation("Speaker bio"),
+ * )
+ */
+class SpeakerBio extends IntentPluginBase {
+  
+  public function process() {
+    if ($speaker = $this->request->getIntentSlot('Speaker', FALSE)) {
+      // Do something with $speaker.
+      return $this->response->setIntentResponse(...);
+    }
+    $this->response->setIntentResponse(...);
+  }
+}
+</code></pre>
+
+--
+
 ## Pushing entities
-(show me some site building)
+(show me some site building)<br>
+![](./images/Selection_037.png)
+
+
+--
+
+## Advanced pushing
+(DIY query and push)
+
+--
+
+## Custom query
+
+<pre><code class="php">
+namespace Drupal\your_module\Plugin\ChatbotApiEntities\QueryHandler;
+
+use Drupal\chatbot_api_entities\Entity\EntityCollectionInterface;
+use Drupal\chatbot_api_entities\Plugin\QueryHandlerBase;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+/**
+ * @QueryHandler(
+ *   id = "speakers",
+ *   label = @Translation("Query speakers from sessions"),
+ * )
+ */
+class SpeakerQuery extends QueryHandlerBase {
+
+  public function query(EntityTypeManagerInterface $entityTypeManager, array $existing = [], EntityCollectionInterface $collection) {
+    // Logic that returns array of entities.
+  }
+
+  public function applies($entity_type_id) {
+    return $entity_type_id === 'node';
+  }
+}
+</code></pre>
+
+--
+
+## Custom push
+
+<pre><code class="php">namespace Drupal\ds_akl_bot\Plugin\ChatbotApiEntities\PushHandler;
+
+use Drupal\api_ai_webhook\Plugin\ChatbotApiEntities\PushHandler\ApiAiPushHandler;
+use Drupal\chatbot_api_entities\Entity\EntityCollection;
+use Drupal\Core\Entity\EntityInterface;
+/**
+ * @PushHandler(
+ *   id = "api_ai_webhook_company",
+ *   label = @Translation("API AI entities endpoint (company)")
+ * )
+ */
+class CompanyPush extends ApiAiPushHandler {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function formatEntries(array $entities, EntityCollection $entityCollection) {
+    // Get values from the entities as ['value' =>, 'synonyms' => []] pairs.
+  }
+}
+</code></pre>
 
 ---
 
@@ -235,9 +393,20 @@ Note:
 
 --
 
+## Thanks
+
+- The Drupal South Team
+- Sparks Interactive
+- Dieuwe De Boer
+- @gambry
+
+--
+
 ## Image credits
 
 - https://flic.kr/p/73DhiT
 - https://flic.kr/p/smA95B
 
 --
+
+## Questions
